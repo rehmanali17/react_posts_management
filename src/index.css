@@ -1,13 +1,196 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  list-style: none;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+}
+
+.logo{
+  display: block;
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  margin-left: 2vw;
+}
+
+.logo img{
+  animation: logo infinite 10s linear;
+}
+
+
+@keyframes logo {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+.links{
+  width: 14vw;
+  margin-right: 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth{
+  width: 100vw;
+  height: calc(100vh - 60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-login{
+  min-height: 30vh;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 0px 1px 0px black inset;
+  border-radius: 10px;
+  position: relative;
+  top: -60px;
+}
+
+.auth-register{
+  min-height: 45vh;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 0px 1px 0px black inset;
+  border-radius: 10px;
+  position: relative;
+  top: -60px;
+}
+
+input{
+  font-size: 20px;
+  padding: 6px 9px;
+}
+
+.dashboard{
+  width: 100vw;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  margin: 18px 0;
+}
+
+
+
+
+.item {
+  width: 50vmax;
+  height: min-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item li{
+  display: block;
+  width: calc(100% - 70px);
+  height: 100%;
+  text-align: start;
+  margin: 12px 0;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0 black;
+  padding: 3px 12px;
+  cursor: pointer;
+}
+
+.item li:hover{
+  text-decoration: line-through;
+  background: #f4f4f4;
+}
+
+.add-todo form{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 0 28px 0;
+}
+
+.add-todo form input[type="text"]{
+  width: 450px;
+}
+
+.add-todo form input[type="submit"]{
+  width: 100px;
+}
+
+.edit-todo {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  position: absolute;
+  top: 60px;
+  left: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+}
+
+.edit-todo form{
+  width: 400px;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  top: -60px;
+  background: #f4f4f4;
+  border-radius: 10px;
+}
+
+.edit-todo form input[type="text"]{
+  width: 340px;
+}
+
+.close{
+  position: absolute;
+  top: calc(50% - 20vh);
+  left: calc(50% + 170px) ;
+  z-index: 2;
+  background: none;
+  color: red;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+input + p {
+  font-size: 0.9em;
+  color: red;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.center-para{
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.9em;
+  margin-top: 30px;
+  color: red;
 }

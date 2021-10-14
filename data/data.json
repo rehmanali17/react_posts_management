@@ -1,0 +1,30 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Rehman Ali",
+      "age": 25,
+      "email": "rehmanmalik17@gmail.com",
+      "password": "malik 70"
+    },
+    {
+      "name": "Rehman Ali",
+      "age": "23",
+      "email": "mail@dnssupply.com",
+      "password": "123456",
+      "id": 2
+    }
+  ],
+  "todos": [
+    {
+      "title": "Pray Isha at time",
+      "user_id": 1,
+      "id": 3
+    },
+    {
+      "title": "Pray Ishaa",
+      "user_id": 1,
+      "id": 4
+    }
+  ]
+}
